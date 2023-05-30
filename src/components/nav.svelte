@@ -6,6 +6,7 @@
         <div class="flex">
             <a href="/" class="text-sm mx-4 font-semibold leading-6 text-gray-100">Home</a>
             <a href="/app" class="text-sm font-semibold leading-6 text-gray-100">App</a>
+            <a href="https://github.com/Hayzie/ExpenseTrackerApp" class="text-sm font-semibold leading-6 text-gray-100">Source code</a>
         </div>
     
       
