@@ -14,5 +14,6 @@
 <style>
     .flex-initial{
         justify-content: start;
+        margin-bottom: 1rem;
     }
 </style>
