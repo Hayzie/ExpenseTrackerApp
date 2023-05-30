@@ -244,8 +244,8 @@
 }
 .app{
   border-radius: 0.75rem;
-  padding: 2rem;
-  width: 400px;
+  padding: 0.8rem;
+  width: 100%;
   margin: 0 auto;
   background-color: black;
 }
@@ -267,5 +267,14 @@ ul>li{
   margin: 0 auto;
 }
 .expense-row:hover ._hide { display: inline-flex; }
+     
+/* Media query for desktop screens */
+@media screen and (min-width: 768px) {
+      .app{
+        width: 400px; /* Specific width for desktop */
+        font-size: 18px;
+        padding: 0.8rem;
+      }
+    }
 
  </style>
