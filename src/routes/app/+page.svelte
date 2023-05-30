@@ -248,6 +248,7 @@
   width: 100%;
   margin: 0 auto;
   background-color: black;
+  min-width: 200px
 }
 ul>li{
   background-color: #29292a;
