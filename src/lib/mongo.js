@@ -4,8 +4,8 @@ import { MongoClient } from 'mongodb';
 //const uri = process.env['MONGODB_URI'];
 // **Don’t do this in real life**: 
 //const uri = "mongodb+srv://hazelphaho:F4g1eVtwnX1PbJGP@cluster0.xydmv8y.mongodb.net/?retryWrites=true&w=majority";
-//const uri = "mongodb+srv://hazelphaho:F4g1eVtwnX1PbJGP@cluster0.xydmv8y.mongodb.net/?retryWrites=true&w=majority";
-const uri = "mongodb+srv://hazelphaho:F4g1eVtwnX1PbJGP@cluster0.xydmv8y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = "mongodb+srv://hazelphaho:F4g1eVtwnX1PbJGP@cluster0.xydmv8y.mongodb.net/?retryWrites=true&w=majority";
+//const uri = "mongodb+srv://hazelphaho:F4g1eVtwnX1PbJGP@cluster0.xydmv8y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 const options = {
    useUnifiedTopology: true,
