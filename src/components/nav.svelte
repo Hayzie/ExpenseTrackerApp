@@ -5,7 +5,7 @@
        
         <div class="flex pt-4">
             <a href="/" class="text-sm mx-4 font-semibold leading-6 text-gray-100">Home</a>
-            <a href="https://github.com/Hayzie/ExpenseTrackerApp" class="text-sm font-semibold leading-6 text-gray-100">Source code (currently in developmen)</a>
+            <a href="https://github.com/Hayzie/ExpenseTrackerApp" class="text-sm font-semibold leading-6 text-gray-100">Source code (currently in development)</a>
         </div>
     
       
