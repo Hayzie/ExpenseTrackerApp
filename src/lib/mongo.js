@@ -2,34 +2,31 @@ import dotenv from 'dotenv';
 dotenv.config();
 import { MongoClient } from 'mongodb';
 //const uri = process.env['MONGODB_URI'];
-// **Don’t do this in real life**: 
-//const uri = "mongodb+srv://hazelphaho:F4g1eVtwnX1PbJGP@cluster0.xydmv8y.mongodb.net/?retryWrites=true&w=majority";
-const uri = "mongodb+srv://hazelphaho:jA7MyUr6X3tHVJuN@cluster0.xydmv8y.mongodb.net/?retryWrites=true&w=majority";
-//const uri = "mongodb+srv://hazelphaho:F4g1eVtwnX1PbJGP@cluster0.xydmv8y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = process.env.MONGO_DB_URL;
 
 const options = {
-   useUnifiedTopology: true,
-   useNewUrlParser: true,
-}
-let client
-let clientPromise
+	useUnifiedTopology: true,
+	useNewUrlParser: true
+};
+let client;
+let clientPromise;
 if (!uri) {
-   throw new Error('Please add your Mongo URI to .env.local')
+	throw new Error('Please add your Mongo URI to .env.local');
 }
 if (process.env['NODE_ENV'] === 'development') {
-   // In development mode, use a global variable
-   // so that the value is preserved across module reloads
-   // caused by HMR (Hot Module Replacement).
-   if (!global._mongoClientPromise) {
-       client = new MongoClient(uri, options)
-       global._mongoClientPromise = client.connect()
-   }
-   clientPromise = global._mongoClientPromise
+	// In development mode, use a global variable
+	// so that the value is preserved across module reloads
+	// caused by HMR (Hot Module Replacement).
+	if (!global._mongoClientPromise) {
+		client = new MongoClient(uri, options);
+		global._mongoClientPromise = client.connect();
+	}
+	clientPromise = global._mongoClientPromise;
 } else {
-   // In production mode, it's best to
-   // not use a global variable.
-   client = new MongoClient(uri, options)
-   clientPromise = client.connect()
+	// In production mode, it's best to
+	// not use a global variable.
+	client = new MongoClient(uri, options);
+	clientPromise = client.connect();
 }
 // Export a module-scoped MongoClient promise.
 // By doing this in a separate module,
